@@ -7,7 +7,6 @@ import "./styles.scss"
     const [year, setYear] = useContext(CurrentYear)
     const [yearIndex, setyearIndex] = useContext(YearIndexValue)
     const [buttonClicked , setButtonClicked]=useContext(SelectedYear)
-    console.log(buttonClicked)
     const renderButtons = () => {
         const buttons = [];
 
