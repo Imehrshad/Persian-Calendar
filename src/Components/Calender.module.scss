@@ -1,0 +1,205 @@
+@import "./Fonts.scss";
+
+@mixin CenterDev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: VazirMedium;
+}
+
+
+
+$buttonWidth: 14.2857%;
+$buttonWidthYears: 20%;
+
+.CalenderContainer {
+    @include CenterDev();
+    min-width: 250px;
+    max-width: 500px;
+    max-height: 600px;
+    min-height: 300px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.61);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.DaysContainer {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+
+    button {
+        width: $buttonWidth;
+        aspect-ratio: 3/4;
+        background: rgba(255, 255, 255, 0.192);
+        border-radius: 4px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.027);
+        backdrop-filter: blur(8.5px);
+        -webkit-backdrop-filter: blur(8.5px);
+        border: 0.2px solid rgba(117, 75, 231, 0.096);
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(10, 0, 102);
+        transition: background-color 250ms;
+
+        &:hover {
+            transition: all 250ms;
+            background-color: rgb(116, 75, 231);
+            cursor: pointer;
+            color: white;
+        }
+    }
+}
+
+.MonthContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    P {
+        font-family: "VazirBold" !important;
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        font-size: 30px;
+        cursor: pointer;
+        color: rgb(10, 0, 102);
+    }
+}
+
+.YearContainer {
+    @include CenterDev();
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+
+}
+
+.YearsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+
+
+    button {
+        width: $buttonWidthYears;
+        aspect-ratio: 3/2;
+        border: 0.2px solid rgba(117, 75, 231, 0.096);
+        background: rgba(255, 255, 255, 0.192);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.068);
+        backdrop-filter: blur(8.5px);
+        -webkit-backdrop-filter: blur(8.5px);
+        border-radius: 4px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(10, 0, 102);
+        transition: background-color 250ms;
+
+        &:hover {
+            transition: all 250ms;
+            background-color: rgb(116, 75, 231);
+            cursor: pointer;
+            color: white;
+        }
+    }
+}
+
+.active {
+    background-color: rgb(116, 75, 231) !important;
+    color: white !important;
+}
+
+.ResultContainer {
+    @include CenterDev();
+    direction: rtl;
+}
+
+.Continer {
+
+    @include CenterDev();
+}
+
+.animationContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 10px;
+    background: linear-gradient(274deg, #0099ff1f, #754bdf3f, #4ad5e433);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 14s ease infinite;
+    -moz-animation: AnimationName 14s ease infinite;
+    animation: AnimationName 14s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 76%
+    }
+
+    50% {
+        background-position: 100% 25%
+    }
+
+    100% {
+        background-position: 0% 76%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 76%
+    }
+
+    50% {
+        background-position: 100% 25%
+    }
+
+    100% {
+        background-position: 0% 76%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 76%
+    }
+
+    50% {
+        background-position: 100% 25%
+    }
+
+    100% {
+        background-position: 0% 76%
+    }
+}
